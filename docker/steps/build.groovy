@@ -10,9 +10,9 @@ void call(app_env){
     // } else{
     node(nodeName){
     stage("Build Image"){
-        // sh """docker login ${registryUrl}--username ${userName} --password ${password} --verbose"""
+        sh """docker login ${registryUrl}--username ${userName} --password ${password} --verbose"""
         // sh "echo $userName"
-        println("user is:$credentials")
+        // println("user is:$credentials")
         }
     }
     // }
