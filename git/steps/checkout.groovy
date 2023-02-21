@@ -1,5 +1,5 @@
 void call(app_env){
-    String gitUrl = app_env.git_url
+    String gitUrl = app_env.git_uarl
     String branch = app_env.branch ?: "main"
 	String nodeName = config.nodename ?: "master"
     stage("Git Checkout"){
