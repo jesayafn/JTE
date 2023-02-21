@@ -8,7 +8,7 @@ void call(app_env){
     stage("Build Image"){
         node(nodeName){
         // sh """docker login ${registryUrl} --username ${userName} --password ${password}"""
-        sh """cd ${dirContext} && docker build . -t https://${registry}/${userName}/${tag}"""
+        sh """cd ${dirContext} && docker build . -t ${registry}/${userName}/${tag}"""
         }
     }
 
