@@ -16,12 +16,12 @@ void call(app_env){
             //     userRemoteConfigs: [[url: "${url}"]]
             // )
             // println(url)
-            // checkout scmGit(
-            //     branches: [[name: "*/${branch}"]], 
-            //     extensions: [], 
-            //     userRemoteConfigs: [[url: "${gitUrl}"]])
-            // }
-            git branch: "${branch}", url: "${gitUrl}"
+            checkout scmGit(
+                branches: [[name: "*/${branch}"]], 
+                extensions: [], 
+                userRemoteConfigs: [[url: "${gitUrl}"]])
+            }
+            // git branch: "${branch}", url: "${gitUrl}"
             }
     }
 }
