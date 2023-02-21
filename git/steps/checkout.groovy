@@ -6,14 +6,15 @@ void call(app_env){
         node(nodeName){
 		//cleanWs()
 		// git branch: "${branch}", url: "${url}"
-        checkout(
-            $class: 'GitSCM',
-            branches: [[name: "${branch}"]],
-            doGenerateSubmoduleConfigurations: false,
-            extensions: [],
-            submoduleCfg: [],
-            userRemoteConfigs: [[url: "${url}"]]
-        )
+        // checkout(
+        //     $class: 'GitSCM',
+        //     branches: [[name: "${branch}"]],
+        //     doGenerateSubmoduleConfigurations: false,
+        //     extensions: [],
+        //     submoduleCfg: [],
+        //     userRemoteConfigs: [[url: "${url}"]]
+        // )
+        checkout scmGit(branches: [[name: "*/${branch}"]], extensions: [], userRemoteConfigs: [[url: '${url}']])
 	    }
     }
 }
