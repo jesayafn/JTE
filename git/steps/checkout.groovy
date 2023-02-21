@@ -14,7 +14,7 @@ void call(app_env){
         //     submoduleCfg: [],
         //     userRemoteConfigs: [[url: "${url}"]]
         // )
-        // println(app_env.git_url)
+        println(app_env.git_url)
         checkout scmGit(branches: [[name: "*/${branch}"]], extensions: [], userRemoteConfigs: [[url: "${url}"]])
 	    }
     }
