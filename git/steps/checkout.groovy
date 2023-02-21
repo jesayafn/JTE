@@ -1,4 +1,4 @@
-void call(app_env){
+def call(app_env){
     String gitUrl = app_env.git_url
     String branch = app_env.branch ?: "main"
 	String nodeName = config.nodename ?: "master"
