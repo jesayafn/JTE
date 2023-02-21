@@ -7,14 +7,12 @@ void call(app_env){
 		//cleanWs()
 		// git branch: "${branch}", url: "${url}"
         checkout(
-            [
             $class: 'GitSCM',
             branches: [[name: "${branch}"]],
             doGenerateSubmoduleConfigurations: false,
             extensions: [],
             submoduleCfg: [],
             userRemoteConfigs: [[url: "${url}"]]
-            ]
         )
 	    }
     }
