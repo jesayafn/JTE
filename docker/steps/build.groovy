@@ -9,7 +9,7 @@ void call(app_env){
     node(nodeName){
     stage("Build Image"){
         sh '''buiildah login --username ${app_env.user} --password ${app_env.password --verbose'''
+        }
     }
-    // }
     // }
 }
