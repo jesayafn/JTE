@@ -7,7 +7,7 @@ void call(app_env){
     String tag = app_env.docker_image_tag
     stage("Build Image"){
         node(nodeName){
-        sh """docker login https://${registry} --username ${userName} --password ${password}"""
+        sh """docker login http://${registry} --username ${userName} --password ${password}"""
         sh """docker push ${registry}/${userName}/${tag}"""
         // sh """cd ${dirContext} && docker build ."""
         }
