@@ -4,7 +4,7 @@ void call(app_env){
 	String nodeName = config.nodename ?: "master"
     stage("Git Checkout"){
         node(nodeName){
-            steps{
+            // steps{
             //cleanWs()
             // git branch: "${branch}", url: "${url}"
             // checkout(
@@ -21,7 +21,7 @@ void call(app_env){
             //     extensions: [], 
             //     userRemoteConfigs: [[url: "${gitUrl}"]])
             git branch: "${branch}", url: "${gitUrl}"
-            }
+            // }
             }
     }
 }
