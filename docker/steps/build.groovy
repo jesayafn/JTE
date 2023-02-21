@@ -1,7 +1,8 @@
 void call(app_env){
     String nodeName = config.nodename ?: "master"
-    String userName = app_env.user
-    String password = app_env.password
+    // String userName = app_env.credentials.usr
+    // String password = app_env.credentials.psw
+    String credentials = app_env.credentials
     String registryUrl = app_env.url
     // String imageTag = app_env.imageTag
     // if(!userName?.trim() || !password.trim() || !imageTag.trim()){
@@ -9,9 +10,9 @@ void call(app_env){
     // } else{
     node(nodeName){
     stage("Build Image"){
-        sh """docker login --username ${userName} --password ${password} --verbose"""
+        // sh """docker login ${registryUrl}--username ${userName} --password ${password} --verbose"""
         // sh "echo $userName"
-        // println("user is:$userName")
+        println("user is:$credentials")
         }
     }
     // }
