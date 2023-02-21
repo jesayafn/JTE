@@ -8,7 +8,7 @@ void call(app_env){
     // } else{
     node(nodeName){
     stage("Build Image"){
-        sh '''buiildah login --username ${app_env.user} --password ${app_env.password} --verbose'''
+        sh '''buiildah login --username ${userName} --password ${password} --verbose'''
         }
     }
     // }
