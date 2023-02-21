@@ -3,7 +3,7 @@ void call(app_env){
     String userName = app_env.user
     String password = app_env.password
     String imageTag = app_env.imageTag
-    if(userName=null || password=null || imageTag=null){
+    if(!userName?.trim() || !password.trim() || !imageTag.trim()){
         println("ABORT! NEED SOME PARAMETER")  
     } else{
         node(nodeName){
