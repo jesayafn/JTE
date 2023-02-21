@@ -5,6 +5,16 @@ void call(app_env){
 	node(nodeName){
         stage("Git Checkout"){
 		//cleanWs()
-		git branch: "${branch}", url: "${url}"
+		// git branch: "${branch}", url: "${url}"
+        checkout(
+            [
+            $class: 'GitSCM',
+            branches: [[name: "${branch}"]],
+            doGenerateSubmoduleConfigurations: false,
+            extensions: [],
+            submoduleCfg: [],
+            userRemoteConfigs: [[url: "${url}"]]
+            ]
+        )
 	}
 }
