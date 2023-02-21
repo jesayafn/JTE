@@ -16,5 +16,6 @@ void call(app_env){
             userRemoteConfigs: [[url: "${url}"]]
             ]
         )
-	}
+	    }
+    }
 }
