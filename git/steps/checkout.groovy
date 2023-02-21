@@ -5,6 +5,6 @@ void call(app_env){
 	node(nodeName){
         stage("Git Checkout"){
 		//cleanWs()
-		git branch: "${branch}", url: "${git_url}"
+		git branch: "${branch}", url: "${url}"
 	}
 }
