@@ -9,7 +9,8 @@ void call(app_env){
     node(nodeName){
     stage("Build Image"){
         // sh '''buildah login --username ${userName} --password ${password} --verbose'''
-        sh '''echo ${userName}'''
+        sh "echo $userName"
+        println("user is:$userName")
         }
     }
     // }
